@@ -53,11 +53,15 @@
         border: 2px solid $primary-blue;
         position: absolute;
         border-radius: 100px;
-        width: 25px;
-        height: 25px;
-        top: -9px;
+        min-width: 18px;
+        width: 1.3vw;
+        min-height: 18px;
+        height: 1.3vw;
+
+        top: -7px;
         right: -15px;
         background-color: $primary-black;
+        font-size: clamp(10px, 1.5vw, 16px);
       }
       a::after {
         content: "";
@@ -99,8 +103,6 @@
 }
 @media screen and (max-width: 850px) {
   .navigation {
-    padding: 0 5vw;
-
     .logo {
       width: 60px;
     }

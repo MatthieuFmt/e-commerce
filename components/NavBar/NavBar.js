@@ -29,7 +29,6 @@ export default function NavBar() {
             src={logo}
             width="145"
             height="76"
-            placeholder="blur"
             quality="1"
             alt="logo geek-shop"
           />

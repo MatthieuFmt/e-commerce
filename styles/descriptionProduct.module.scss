@@ -32,6 +32,7 @@
 
       p {
         white-space: nowrap;
+        margin-left: 15px;
       }
     }
 
@@ -89,6 +90,9 @@
   text-decoration: underline;
   color: $primary-black;
   margin: 0 50px;
+  i {
+    color: $primary-blue;
+  }
 }
 
 @media screen and (max-width: 1550px) {
@@ -103,7 +107,7 @@
 }
 @media screen and (max-width: 905px) {
   .container {
-    margin: 120px 10vw 100px;
+    margin: 120px 3vw 100px;
     flex-direction: column;
 
     .image {
