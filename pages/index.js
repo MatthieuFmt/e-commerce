@@ -15,18 +15,19 @@ export default function Home() {
       </Head>
 
       <main className={styles.container}>
-        <h1 className={styles.title}>Bienvenue sur Geek Shop</h1>
-        <h2>N°1 francais de la vente en ligne de matériel informatique</h2>
-        <div className={styles.img_home}>
-          <Image
-            src={imgHome}
-            width="1920"
-            height="1280"
-            layout="responsive"
-            placeholder="blur"
-            alt="set-up gaming"
-          />
-        </div>
+        <section>
+          <div className={styles.img_home}>
+            <Image
+              src={imgHome}
+              width="1920"
+              height="1280"
+              layout="responsive"
+              placeholder="blur"
+              alt="set-up gaming"
+            />
+          </div>
+          <h1 className={styles.title}>Bienvenue sur Geek Shop</h1>
+        </section>
       </main>
     </>
   );
