@@ -1,0 +1,171 @@
+@import "../styles/_variables";
+@import "../styles/_placeholders";
+
+.container {
+  position: relative;
+  margin: 0 20vw;
+
+  color: $primary-grey;
+
+  min-height: 80vh;
+
+  section {
+    @extend %flexBetween;
+
+    margin-top: 100px;
+    font-size: clamp(1em, 2vw, 1.3em);
+  }
+
+  ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 50px 0;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+
+    background: rgb(57, 62, 70);
+    background: linear-gradient(
+      61deg,
+      rgba(57, 62, 70, 1) 0%,
+      rgba(34, 40, 49, 1) 35%
+    );
+    color: $primary-white;
+
+    .left {
+      display: flex;
+      align-items: center;
+
+      .image {
+        width: 120px;
+      }
+
+      .details {
+        margin-left: 10px;
+      }
+    }
+
+    .quantity {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 10px;
+
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80px;
+        button {
+          padding: 5px;
+          font-size: 18px;
+          background-color: $primary-blue;
+          color: $primary-white;
+          border-radius: 5px;
+
+          transition: background 0.1s;
+
+          text-shadow: 0 0 4px $primary-black;
+
+          &:hover {
+            background-color: hsl(170, 74%, 44%);
+          }
+
+          &:active {
+            box-shadow: inset 1px 1px 3px $primary-black;
+          }
+        }
+      }
+    }
+  }
+
+  .command {
+    display: flex;
+    align-items: center;
+
+    h5 {
+      margin-right: 30px;
+      font-size: 18px;
+    }
+    button {
+      padding: 10px;
+      background-color: $primary-blue;
+
+      border-radius: 5px;
+
+      transition: background 0.1s;
+      color: $primary-white;
+
+      text-shadow: 0 0 5px $primary-black;
+
+      &:hover {
+        background-color: hsl(170, 74%, 44%);
+      }
+
+      &:active {
+        box-shadow: inset 1px 1px 3px $primary-black;
+      }
+    }
+  }
+
+  .empty {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    width: 100%;
+
+    font-size: 25px;
+
+    a {
+      font-size: 16px;
+      text-decoration: underline;
+      color: $primary-blue;
+    }
+  }
+
+  .container_clean {
+    @extend %flexCenter;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $primary-grey;
+    color: $primary-white;
+
+    height: 150px;
+    width: 270px;
+    border-radius: 10px;
+
+    box-shadow: 1px 1px 5px $primary-grey;
+
+    .checked {
+      font-size: 35px;
+      color: $primary-blue;
+    }
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .container {
+    margin: 0 12vw;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .container {
+    margin: 0 5vw;
+  }
+}
+@media screen and (max-width: 1030px) {
+  .container {
+    margin: 0 2vw;
+  }
+}

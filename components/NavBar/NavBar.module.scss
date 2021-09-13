@@ -1,0 +1,111 @@
+@import "../../styles/variables";
+@import "../../styles/placeholders";
+
+.navigation {
+  @extend %flexBetween;
+  position: fixed;
+
+  width: 100%;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  margin: auto;
+  width: 98%;
+  height: 75px;
+
+  padding: 0 20vw;
+  border-radius: 0 0 10px 10px;
+
+  box-shadow: 0 1px 5px $primary-black;
+
+  background-color: $primary-black;
+  color: $primary-blue;
+
+  .logo {
+    width: 100px;
+    flex-shrink: 0;
+  }
+
+  .links {
+    display: flex;
+
+    .link {
+      position: relative;
+
+      font-size: clamp(12px, 2vw, 18px);
+      padding-left: 60px;
+
+      font-weight: bold;
+      color: $primary-white;
+
+      white-space: nowrap;
+
+      i {
+        color: $primary-blue;
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid $primary-blue;
+        position: absolute;
+        border-radius: 100px;
+        width: 25px;
+        height: 25px;
+        top: -9px;
+        right: -15px;
+        background-color: $primary-black;
+      }
+      a::after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 3px;
+
+        background-color: $primary-blue;
+        width: 0;
+        transition: width 0.2s;
+        border-radius: 10px;
+      }
+      &:hover a::after {
+        opacity: 1;
+        width: 100%;
+      }
+
+      a.active_nav:after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .navigation {
+    padding: 0 12vw;
+
+    .links .link {
+      padding-left: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .navigation {
+    padding: 0 5vw;
+  }
+}
+@media screen and (max-width: 850px) {
+  .navigation {
+    padding: 0 5vw;
+
+    .logo {
+      width: 60px;
+    }
+    .links .link {
+      padding-left: 20px;
+    }
+  }
+}

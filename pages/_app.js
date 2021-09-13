@@ -1,7 +1,15 @@
-import '../styles/globals.css'
-
+import "../styles/globals.scss";
+import Container from "../components/Container/Container";
+import BasketContextProvider from "../components/Container/Context";
+import React from "react";
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <BasketContextProvider>
+      <Container>
+        <Component {...pageProps} />
+      </Container>
+    </BasketContextProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;
