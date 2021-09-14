@@ -1,7 +1,7 @@
 import "../styles/globals.scss";
 import Container from "../components/Container/Container";
 import BasketContextProvider from "../components/Container/Context";
-import React from "react";
+
 function MyApp({ Component, pageProps }) {
   return (
     <BasketContextProvider>

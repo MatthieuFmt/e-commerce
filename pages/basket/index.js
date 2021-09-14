@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import styles from "../../styles/basket.module.scss";
 import Head from "next/head";
 import Image from "next/image";

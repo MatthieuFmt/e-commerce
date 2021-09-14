@@ -7,8 +7,9 @@ import { BasketContext } from "../Container/Context";
 import { useRouter } from "next/router";
 
 export default function NavBar() {
-  const router = useRouter();
-  const [activeNav, setActiveNav] = useState();
+  const router = useRouter(),
+    [activeNav, setActiveNav] = useState(),
+    { quantity } = useContext(BasketContext);
 
   useEffect(() => {
     if (router.route === "/") {
@@ -20,7 +21,6 @@ export default function NavBar() {
     }
   }, [router]);
 
-  const { quantity } = useContext(BasketContext);
   return (
     <header>
       <nav className={styles.navigation}>

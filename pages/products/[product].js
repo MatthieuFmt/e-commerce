@@ -54,12 +54,10 @@ export default function Slug({ currentProduct }) {
 
       const total = currentObject.quantity * currentObject.price;
       currentObject.totalPrice = total;
-
-      setBasket(arrayBasket);
     } else {
       arrayBasket.pop();
-      setBasket(arrayBasket);
     }
+    setBasket(arrayBasket);
   };
 
   return (

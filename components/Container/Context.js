@@ -1,21 +1,18 @@
-import React, { createContext, useState } from "react";
+import { createContext, useState } from "react";
 
 export const BasketContext = createContext();
 
 const BasketContextProvider = (props) => {
-  const [basket, setBasket] = useState([]);
+  const [basket, setBasket] = useState([]),
+    [command, setCommand] = useState(false);
 
-  let price = 0;
-  for (const item of basket) {
-    price += item.totalPrice;
-  }
+  let price = 0,
+    quantity = 0;
 
-  let quantity = 0;
   for (const item of basket) {
     quantity += item.quantity;
+    price += item.totalPrice;
   }
-
-  const [command, setCommand] = useState(false);
 
   return (
     <BasketContext.Provider
