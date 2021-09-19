@@ -16,21 +16,15 @@ export default function Index() {
   };
 
   useEffect(() => {
-    const commandTxt = setTimeout(() => {
+    setTimeout(() => {
       setCommand(false);
     }, 2000);
-
-    return () => {
-      clearTimeout(commandTxt);
-    };
   }, [command]);
 
   const arrayBasket = [...basket];
 
   const more = (id) => {
-    const index = basket.findIndex((obj) => {
-      return obj.id === id;
-    });
+    const index = basket.findIndex((obj) => obj.id === id);
 
     arrayBasket[index].quantity++;
 
@@ -41,18 +35,18 @@ export default function Index() {
   };
 
   const less = (id) => {
-    const index = basket.findIndex((obj) => {
-      return obj.id === id;
-    });
+    const index = basket.findIndex((obj) => obj.id === id);
     if (arrayBasket[index].quantity > 1) {
       arrayBasket[index].quantity--;
 
       const total = arrayBasket[index].quantity * arrayBasket[index].price;
       arrayBasket[index].totalPrice = total;
+      setBasket(arrayBasket);
     } else {
-      arrayBasket.pop();
+      const newArr = arrayBasket.filter((item) => item.id !== id);
+      console.log(newArr);
+      setBasket(newArr);
     }
-    setBasket(arrayBasket);
   };
 
   return (
@@ -89,7 +83,14 @@ export default function Index() {
                     <h4>
                       {article.type} {article.brand} {article.name}
                     </h4>
-                    <p>prix : {article.totalPrice.toFixed(2)} €</p>
+                    <p>
+                      prix :{" "}
+                      {
+                        article.totalPrice
+                        // .toFixed(2)
+                      }{" "}
+                      €
+                    </p>
                   </div>
                 </div>
                 <div className={styles.quantity}>

@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
 
-import React, { useContext, useState } from "react";
+import { useContext } from "react";
 import { BasketContext } from "../../components/Container/Context";
 
 export default function Slug({ currentProduct }) {
@@ -25,6 +25,7 @@ export default function Slug({ currentProduct }) {
       image: currentProduct.image,
       type: currentProduct.type,
       brand: currentProduct.brand,
+      id: basket.length,
     });
 
     setBasket(arrayBasket);
@@ -75,7 +76,6 @@ export default function Slug({ currentProduct }) {
             height="1600"
             layout="responsive"
             quality="50"
-            blurDataURL
             alt={currentProduct.type}
           />
         </div>

@@ -29,6 +29,7 @@ export default function Products({ array }) {
                       height="1600"
                       layout="responsive"
                       quality="1"
+                      // placeholder="blur"
                       blurDataURL
                       alt={article.type}
                     />

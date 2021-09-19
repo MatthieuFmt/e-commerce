@@ -5,7 +5,6 @@
   @extend %flexBetween;
   position: fixed;
 
-  width: 100%;
   z-index: 200;
   top: 0;
   left: 0;
@@ -37,7 +36,6 @@
       font-size: clamp(12px, 2vw, 18px);
       padding-left: 60px;
 
-      font-weight: bold;
       color: $primary-white;
 
       white-space: nowrap;
@@ -47,12 +45,12 @@
       }
 
       span {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 2px solid $primary-blue;
         position: absolute;
+        @extend %flexCenter;
+        border: 2px solid $primary-blue;
+
         border-radius: 100px;
+
         min-width: 18px;
         width: 1.3vw;
         min-height: 18px;

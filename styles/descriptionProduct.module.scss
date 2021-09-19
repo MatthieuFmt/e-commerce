@@ -37,9 +37,7 @@
     }
 
     .bottom {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      @extend %flexBetween;
 
       margin-top: 10px;
 
@@ -67,7 +65,7 @@
           text-shadow: 0 0 4px $primary-black;
 
           &:hover {
-            background-color: hsl(170, 74%, 44%);
+            background-color: #1dc3a8;
           }
 
           &:active {
@@ -76,9 +74,7 @@
         }
 
         .more_less {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
+          @extend %flexBetween;
           width: 100px;
         }
       }
