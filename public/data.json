@@ -1,120 +1,132 @@
 {
   "products": [
     {
+      "id": 0,
       "name": "RTX-2070",
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae atque magnam facilis perspiciatis, maiores sunt aut amet illum dolore, sapiente eligendi .",
       "price": 590.95,
-      "image": "/assets/rtx-2070.jpg",
+
       "note": "4.1",
       "type": "Carte graphique",
       "brand": "NVIDIA",
       "opinions": "58"
     },
     {
+      "id": 1,
       "name": "RX-580",
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae atque magnam facilis perspiciatis, maiores sunt aut amet illum dolore, sapiente eligendi .",
       "price": 359.95,
-      "image": "/assets/rx-580.jpg",
+
       "note": "3.8",
       "type": "Carte graphique",
       "brand": "AMD",
       "opinions": "43"
     },
     {
+      "id": 2,
       "name": "RX-6900",
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae atque magnam facilis perspiciatis, maiores sunt aut amet illum dolore, sapiente eligendi .",
       "price": 1950.95,
-      "image": "/assets/rx-6900.jpg",
+
       "note": "4.4",
       "type": "Carte graphique",
       "brand": "AMD",
       "opinions": "15"
     },
     {
+      "id": 3,
       "name": "RTX-3090",
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae atque magnam facilis perspiciatis, maiores sunt aut amet illum dolore, sapiente eligendi .",
       "price": 2949.95,
-      "image": "/assets/rtx-3090.jpg",
+
       "note": "4.6",
       "type": "Carte graphique",
       "brand": "NVIDIA",
       "opinions": "18"
     },
     {
+      "id": 4,
       "name": "GTX-1660",
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae atque magnam facilis perspiciatis, maiores sunt aut amet illum dolore, sapiente eligendi .",
       "price": 279.95,
-      "image": "/assets/gtx-1660.jpg",
+
       "note": "3.5",
       "type": "Carte graphique",
       "brand": "NVIDIA",
       "opinions": "67"
     },
     {
+      "id": 5,
       "name": "RX-5500",
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae atque magnam facilis perspiciatis, maiores sunt aut amet illum dolore, sapiente eligendi .",
       "price": 279.95,
-      "image": "/assets/rx-5500.jpg",
+
       "note": "3.4",
       "type": "Carte graphique",
       "brand": "AMD",
       "opinions": "72"
     },
     {
+      "id": 6,
       "name": "ryzen-7",
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae atque magnam facilis perspiciatis, maiores sunt aut amet illum dolore, sapiente eligendi .",
       "price": 359.95,
-      "image": "/assets/ryzen-7.jpg",
+
       "note": "3.9",
       "type": "Processeur",
       "brand": "AMD",
       "opinions": "35"
     },
     {
+      "id": 7,
       "name": "core-i9",
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae atque magnam facilis perspiciatis, maiores sunt aut amet illum dolore, sapiente eligendi .",
       "price": 729.95,
-      "image": "/assets/i9.jpg",
+
       "note": "4.6",
       "type": "Processeur",
       "brand": "intel",
       "opinions": "30"
     },
     {
+      "id": 8,
       "name": "ryzen-5",
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae atque magnam facilis perspiciatis, maiores sunt aut amet illum dolore, sapiente eligendi .",
       "price": 329.95,
-      "image": "/assets/ryzen-5.jpg",
+
       "note": "3.8",
       "type": "Processeur",
       "brand": "AMD",
       "opinions": "27"
     },
     {
+      "id": 9,
       "name": "core-i7",
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae atque magnam facilis perspiciatis, maiores sunt aut amet illum dolore, sapiente eligendi .",
       "price": 409.95,
-      "image": "/assets/i7.jpg",
+
       "note": "4.1",
       "type": "Processeur",
       "brand": "intel",
       "opinions": "17"
     },
     {
+      "id": 10,
       "name": "ryzen-9",
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae atque magnam facilis perspiciatis, maiores sunt aut amet illum dolore, sapiente eligendi .",
       "price": 729.95,
-      "image": "/assets/ryzen-9.jpg",
+
       "note": "4.2",
       "type": "Processeur",
       "brand": "AMD",
       "opinions": "22"
     },
     {
+      "id": 11,
       "name": "core-i5",
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae atque magnam facilis perspiciatis, maiores sunt aut amet illum dolore, sapiente eligendi .",
       "price": 159.95,
-      "image": "/assets/i5.jpg",
+
       "note": "3.5",
       "type": "Processeur",
       "brand": "intel",

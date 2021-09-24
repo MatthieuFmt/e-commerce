@@ -35,3 +35,10 @@
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
   }
 }
+
+@media screen and (max-width: 800px) {
+  .container .img_home {
+    clip-path: none;
+    width: 100%;
+  }
+}

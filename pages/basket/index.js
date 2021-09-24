@@ -7,7 +7,7 @@ import Link from "next/link";
 import { BasketContext } from "../../components/Container/Context";
 
 export default function Index() {
-  const { basket, setBasket, price, quantity, command, setCommand } =
+  const { basket, setBasket, price, quantity, command, setCommand, images } =
     useContext(BasketContext);
 
   const toCommand = () => {
@@ -71,11 +71,12 @@ export default function Index() {
                 <div className={styles.left}>
                   <div className={styles.image}>
                     <Image
-                      src={article.image}
+                      src={images[article.num]}
                       width="1600"
                       height="1600"
                       layout="responsive"
                       quality="1"
+                      placeholder="blur"
                       alt={article.type}
                     />
                   </div>

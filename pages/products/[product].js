@@ -3,14 +3,13 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
-
 import { useContext } from "react";
 import { BasketContext } from "../../components/Container/Context";
 
 export default function Slug({ currentProduct }) {
   const router = useRouter();
 
-  const { basket, setBasket } = useContext(BasketContext);
+  const { basket, setBasket, images } = useContext(BasketContext);
 
   const product = basket.find((item) => item.name === currentProduct.name);
 
@@ -26,6 +25,7 @@ export default function Slug({ currentProduct }) {
       type: currentProduct.type,
       brand: currentProduct.brand,
       id: basket.length,
+      num: currentProduct.id,
     });
 
     setBasket(arrayBasket);
@@ -71,12 +71,13 @@ export default function Slug({ currentProduct }) {
       <main className={styles.container}>
         <div className={styles.image}>
           <Image
-            src={currentProduct.image}
+            src={images[currentProduct.id]}
             width="1600"
             height="1600"
             layout="responsive"
             quality="50"
             alt={currentProduct.type}
+            placeholder="blur"
           />
         </div>
         <div className={styles.description}>

@@ -2,8 +2,12 @@ import styles from "../../styles/Products.module.scss";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { useContext } from "react";
+import { BasketContext } from "../../components/Container/Context";
 
 export default function Products({ array }) {
+  const { images } = useContext(BasketContext);
+
   return (
     <>
       <Head>
@@ -24,13 +28,12 @@ export default function Products({ array }) {
                 <article className={styles.card}>
                   <div className={styles.image}>
                     <Image
-                      src={article.image}
+                      src={images[id]}
                       width="1600"
                       height="1600"
                       layout="responsive"
                       quality="1"
-                      // placeholder="blur"
-                      blurDataURL
+                      placeholder="blur"
                       alt={article.type}
                     />
                   </div>
@@ -63,12 +66,6 @@ export default function Products({ array }) {
 export async function getStaticProps() {
   const json = await import(`/public/data.json`);
   const array = json.products;
-
-  if (array.length === 0) {
-    return {
-      notFound: true,
-    };
-  }
 
   return {
     props: {

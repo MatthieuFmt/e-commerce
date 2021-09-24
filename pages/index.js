@@ -23,6 +23,7 @@ export default function Home() {
               height="1280"
               layout="responsive"
               placeholder="blur"
+              quality="50"
               alt="set-up gaming"
             />
           </div>
